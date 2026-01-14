@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1220" />
+
+  <title>GO ENERGY | Energía solar y respaldo con baterías en Corrientes</title>
+  <meta name="description" content="Soluciones energéticas: energía solar, respaldo con baterías, termotanques solares y equipos portátiles. Asesoramiento personalizado en Corrientes. Consultá por WhatsApp." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="GO ENERGY | Soluciones energéticas en Corrientes" />
+  <meta property="og:description" content="Energía solar + respaldo con baterías. Asesoramiento personalizado. Consultá por WhatsApp." />
+  <meta property="og:type" content="website" />
+  <!-- Reemplazá por una imagen real del negocio (1200x630) -->
+  <meta property="og:image" content="https://iili.io/fETkPEv.md.png" />
+  <meta property="og:locale" content="es_AR" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="GO ENERGY | Energía solar y respaldo" />
+  <meta name="twitter:description" content="Soluciones energéticas en Corrientes. Consultá por WhatsApp." />
+  <meta name="twitter:image" content="https://iili.io/fETkPEv.md.png" />
+
+  <!-- Favicon (opcional) -->
+  <!-- Reemplazá por el logo real -->
+  <link rel="icon" type="image/png" href="https://iili.io/fETkPEv.md.png" />
+
+  <style>
+    :root{
+      --bg:#070b14;
+      --panel:#0b1220;
+      --panel2:#0d1730;
+      --text:#eaf0ff;
+      --muted:#b9c6e6;
+      --line:rgba(255,255,255,.10);
+      --glow:rgba(54, 169, 255, .22);
+      --c1:#22c1ff;
+      --c2:#6a5cff;
+      --c3:#ffb020;
+      --ok:#3cffb3;
+      --danger:#ff5b6b;
+      --radius:20px;
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --max: 1120px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(1200px 600px at 10% 5%, rgba(34,193,255,.18), transparent 55%),
+        radial-gradient(900px 500px at 90% 0%, rgba(106,92,255,.18), transparent 55%),
+        radial-gradient(900px 500px at 60% 100%, rgba(255,176,32,.12), transparent 55%),
+        linear-gradient(180deg, #050811, #060a14 45%, #070b14 100%);
+      color:var(--text);
+      overflow-x:hidden;
+    }
+
+    a{color:inherit; text-decoration:none}
+    .wrap{width:100%; max-width:var(--max); margin:0 auto; padding:0 18px}
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(7,11,20,.55);
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar .inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px; min-width:180px;
+    }
+    .logo{
+      width:44px; height:44px; border-radius:14px;
+      background:
+        radial-gradient(18px 18px at 30% 25%, rgba(255,255,255,.25), transparent 60%),
+        linear-gradient(135deg, rgba(34,193,255,.95), rgba(106,92,255,.9));
+      box-shadow: 0 10px 30px rgba(34,193,255,.12), 0 10px 30px rgba(106,92,255,.10);
+      display:grid; place-items:center;
+      border:1px solid rgba(255,255,255,.14);
+      overflow:hidden;
+    }
+    .logo img{width:100%; height:100%; object-fit:cover}
+    .brand .txt{display:flex; flex-direction:column; line-height:1.1}
+    .brand .txt b{letter-spacing:.2px}
+    .brand .txt span{font-size:12px; color:var(--muted)}
+
+    .nav{display:flex; align-items:center; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+    .nav a{
+      font-size:13px; color:rgba(234,240,255,.85);
+      padding:8px 10px; border-radius:12px;
+      border:1px solid transparent;
+    }
+    .nav a:hover{border-color:rgba(255,255,255,.12); background:rgba(255,255,255,.04)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:12px 14px; border-radius:16px;
+      border:1px solid rgba(255,255,255,.14);
+      background: linear-gradient(135deg, rgba(34,193,255,.18), rgba(106,92,255,.18));
+      box-shadow: var(--shadow);
+      color:var(--text);
+      font-weight:600;
+      cursor:pointer;
+      user-select:none;
+      transition: transform .15s ease, filter .15s ease;
+      white-space:nowrap;
+    }
+    .btn:hover{transform: translateY(-1px); filter: brightness(1.05)}
+    .btn.primary{
+      border-color: rgba(34,193,255,.35);
+      background: linear-gradient(135deg, rgba(34,193,255,.95), rgba(106,92,255,.92));
+    }
+    .btn.ghost{
+      background: rgba(255,255,255,.04);
+      box-shadow:none;
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 10px; border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.04);
+      color:rgba(234,240,255,.88);
+      font-size:12px;
+      width:max-content;
+    }
+    .dot{width:8px; height:8px; border-radius:99px; background:var(--ok); box-shadow: 0 0 14px rgba(60,255,179,.5)}
+    .hero{
+      position:relative;
+      padding:48px 0 24px;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:22px;
+      align-items:stretch;
+    }
+    .card{
+      border:1px solid rgba(255,255,255,.12);
+      background: linear-gradient(180deg, rgba(11,18,32,.86), rgba(9,14,26,.78));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .card.pad{padding:22px}
+    h1{
+      margin:12px 0 10px;
+      font-size: clamp(28px, 3.4vw, 44px);
+      letter-spacing:-.5px;
+      line-height:1.06;
+    }
+    .lead{
+      color:rgba(234,240,255,.82);
+      font-size: clamp(14px, 1.4vw, 16px);
+      line-height:1.55;
+      margin:0 0 18px;
+    }
+    .heroActions{display:flex; gap:12px; flex-wrap:wrap; margin-top:12px}
+    .badges{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+
+    .miniGrid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin-top:14px;
+    }
+    .mini{
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:18px;
+      padding:12px;
+      background: rgba(255,255,255,.03);
+    }
+    .mini b{display:block; font-size:13px; margin-bottom:6px}
+    .mini span{display:block; font-size:12px; color:var(--muted); line-height:1.4}
+
+    .panelHead{
+      display:flex; align-items:flex-start; justify-content:space-between; gap:10px;
+      margin-bottom:10px;
+    }
+    .panelHead b{font-size:14px}
+    .panelHead span{font-size:12px; color:var(--muted)}
+
+    .form{
+      display:grid;
+      gap:10px;
+      margin-top:12px;
+    }
+    .row{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+    label{font-size:12px; color:rgba(234,240,255,.8)}
+    input, select, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      background: rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.12);
+      outline:none;
+      color:var(--text);
+      font-size:14px;
+    }
+    textarea{min-height:92px; resize:vertical}
+    input::placeholder, textarea::placeholder{color: rgba(185,198,230,.55)}
+    .helper{font-size:12px; color:rgba(185,198,230,.8); line-height:1.45}
+
+    section{padding:22px 0}
+    .sectionTitle{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:14px;
+      margin:0 0 12px;
+    }
+    .sectionTitle h2{
+      margin:0;
+      font-size: clamp(20px, 2.2vw, 28px);
+      letter-spacing:-.3px;
+    }
+    .sectionTitle p{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      max-width:520px;
+    }
+
+    .grid3{display:grid; grid-template-columns:repeat(3, 1fr); gap:14px}
+    .grid2{display:grid; grid-template-columns:repeat(2, 1fr); gap:14px}
+    .feature{
+      padding:16px;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.03);
+      position:relative;
+      overflow:hidden;
+      min-height:128px;
+    }
+    .feature:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(220px 140px at 10% 10%, rgba(34,193,255,.16), transparent 65%),
+                  radial-gradient(220px 140px at 90% 0%, rgba(106,92,255,.14), transparent 65%);
+      pointer-events:none;
+    }
+    .feature b{display:block; font-size:14px; margin-bottom:6px; position:relative}
+    .feature p{margin:0; color:rgba(234,240,255,.78); font-size:13px; line-height:1.45; position:relative}
+
+    .seg{
+      padding:16px;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.12);
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      min-height:160px;
+    }
+    .seg small{color:var(--muted); line-height:1.35}
+    .seg .btn{margin-top:auto; justify-content:center; width:100%}
+
+    .ctaBand{
+      border:1px solid rgba(255,255,255,.12);
+      background: radial-gradient(520px 260px at 15% 50%, rgba(34,193,255,.18), transparent 60%),
+                  radial-gradient(520px 260px at 85% 40%, rgba(106,92,255,.16), transparent 60%),
+                  rgba(255,255,255,.03);
+      border-radius: var(--radius);
+      padding:18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+    .ctaBand b{font-size:16px}
+    .ctaBand span{color:var(--muted); font-size:13px; display:block; margin-top:4px}
+
+    .faq{
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.03);
+      border-radius: 16px;
+      padding:14px;
+    }
+    details{border-radius:14px; padding:10px 10px; background: rgba(255,255,255,.02); border:1px solid rgba(255,255,255,.10)}
+    details + details{margin-top:10px}
+    summary{cursor:pointer; font-weight:700; font-size:13px}
+    details p{margin:8px 0 0; color:rgba(234,240,255,.78); font-size:13px; line-height:1.5}
+
+    footer{
+      margin-top:20px;
+      padding:22px 0 calc(80px + env(safe-area-inset-bottom)); /* deja espacio para el botón flotante */
+      border-top:1px solid var(--line);
+      background: rgba(7,11,20,.55);
+    }
+    .foot{
+      display:flex; align-items:flex-start; justify-content:space-between; gap:14px; flex-wrap:wrap;
+      color:rgba(234,240,255,.78);
+      font-size:13px;
+    }
+    .foot a{color:rgba(234,240,255,.92); text-decoration:underline; text-underline-offset:3px}
+    .social{display:flex; gap:10px; flex-wrap:wrap}
+    .sbtn{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.03);
+    }
+
+    /* WhatsApp flotante (no tapa footer por el padding del footer) */
+    .waFloat{
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      z-index:60;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 14px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.14);
+      background: linear-gradient(135deg, rgba(60,255,179,.95), rgba(34,193,255,.85));
+      color:#071217;
+      font-weight:800;
+      box-shadow: 0 18px 50px rgba(0,0,0,.45);
+      transform: translateZ(0);
+    }
+    .waIcon{
+      width:22px; height:22px; border-radius:7px;
+      background: rgba(0,0,0,.18);
+      display:grid; place-items:center;
+      border:1px solid rgba(0,0,0,.12);
+      overflow:hidden;
+    }
+    .waIcon svg{width:16px; height:16px; fill:#071217}
+    .waFloat small{font-weight:700; opacity:.85}
+
+    /* Responsive */
+    @media (max-width: 920px){
+      .heroGrid{grid-template-columns:1fr}
+      .row{grid-template-columns:1fr}
+      .grid3{grid-template-columns:1fr}
+      .grid2{grid-template-columns:1fr}
+      .nav{display:none}
+    }
+  </style>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "GO ENERGY",
+    "description": "Soluciones energéticas: energía solar, respaldo con baterías, termotanques solares y equipos portátiles.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Corrientes",
+      "addressCountry": "AR"
+    },
+    "areaServed": "Corrientes, Argentina",
+    "url": "https://go-energy.me"
+  }
+  </script>
+</head>
+
+<body>
+  <!-- CONFIG DEMO -->
+  <!-- Reemplazá estos valores por los reales del cliente cuando corresponda -->
+  <script>
+    window.GO_ENERGY_CONFIG = {
+      brandName: "GO ENERGY",
+      city: "Corrientes",
+      website: "https://go-energy.me",
+      instagram: "https://www.instagram.com/go.energy/",
+      // DEMO: tu WhatsApp (cambiá por el de GO ENERGY cuando te lo pasen)
+      waNumberE164: "5491164499481"
+    };
+  </script>
+
+  <header class="topbar">
+    <div class="wrap">
+      <div class="inner">
+        <div class="brand">
+          <div class="logo" aria-hidden="true">
+            <!-- Reemplazá por el logo real si querés -->
+            <img src="https://iili.io/fETkPEv.md.png" alt="Logo" onerror="this.style.display='none'" />
+          </div>
+          <div class="txt">
+            <b>GO ENERGY</b>
+            <span>Soluciones energéticas · Corrientes</span>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a href="#soluciones">Soluciones</a>
+          <a href="#para-quien">¿Para quién?</a>
+          <a href="#proceso">Cómo trabajamos</a>
+          <a href="#faq">FAQ</a>
+          <a class="btn ghost" href="#contacto">Consultar</a>
+        </nav>
+
+        <a class="btn primary" href="#contacto">Consultar por WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="heroGrid">
+          <div class="card pad">
+            <div class="pill"><span class="dot"></span> Asesoramiento personalizado · Respuesta rápida</div>
+
+            <h1>Que los cortes de luz no frenen tu casa o tu negocio.</h1>
+            <p class="lead">
+              Soluciones energéticas con <b>energía solar</b> y <b>respaldo con baterías</b>.
+              Ordenamos tu caso, te orientamos y te llevamos a una decisión clara.
+            </p>
+
+            <div class="heroActions">
+              <button class="btn primary" id="btnHeroWA">Quiero una solución para mi caso</button>
+              <a class="btn ghost" href="#soluciones">Ver soluciones</a>
+            </div>
+
+            <div class="badges">
+              <span class="pill">✔ Proyectos a medida</span>
+              <span class="pill">✔ Instalación / configuración</span>
+              <span class="pill">✔ Equipos portátiles</span>
+              <span class="pill">✔ Financiación (según disponibilidad)</span>
+            </div>
+
+            <div class="miniGrid">
+              <div class="mini">
+                <b>Enfoque práctico</b>
+                <span>Menos tecnicismo, más claridad: qué conviene y por qué.</span>
+              </div>
+              <div class="mini">
+                <b>Atención local</b>
+                <span>Operamos en <span id="cityLabel">Corrientes</span> y alrededores.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- PANEL CONSULTA / FILTRO -->
+          <div class="card pad" id="contacto">
+            <div class="panelHead">
+              <div>
+                <b>Consulta rápida (filtrada)</b><br />
+                <span>Completá 3 datos y te abrimos WhatsApp con el mensaje listo.</span>
+              </div>
+            </div>
+
+            <div class="form">
+              <div class="row">
+                <div>
+                  <label for="tipo">Soy</label>
+                  <select id="tipo">
+                    <option value="Vivienda">Vivienda</option>
+                    <option value="Comercio / PyME">Comercio / PyME</option>
+                    <option value="Empresa / Industria">Empresa / Industria</option>
+                    <option value="Zona rural">Zona rural</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="objetivo">Necesito</label>
+                  <select id="objetivo">
+                    <option value="Respaldo por cortes de luz">Respaldo por cortes de luz</option>
+                    <option value="Bajar consumo / factura">Bajar consumo / factura</option>
+                    <option value="Autonomía con baterías">Autonomía con baterías</option>
+                    <option value="Equipo portátil / estación de energía">Equipo portátil / estación de energía</option>
+                    <option value="No estoy seguro, quiero asesoramiento">Asesoramiento</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <div>
+                  <label for="zona">Zona / ciudad</label>
+                  <input id="zona" type="text" placeholder="Ej: Corrientes Capital" />
+                </div>
+                <div>
+                  <label for="consumo">Factura aprox (opcional)</label>
+                  <select id="consumo">
+                    <option value="No sé / prefiero no indicar">No sé / prefiero no indicar</option>
+                    <option value="Hasta $30.000">Hasta $30.000</option>
+                    <option value="$30.000 a $60.000">$30.000 a $60.000</option>
+                    <option value="$60.000 a $120.000">$60.000 a $120.000</option>
+                    <option value="Más de $120.000">Más de $120.000</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="detalle">Detalle (opcional)</label>
+                <textarea id="detalle" placeholder="Ej: se corta 2/3 veces por semana, necesito que no se apague heladera / bombas / POS / cámaras..."></textarea>
+                <div class="helper">Cuanto más específico, mejor la recomendación.</div>
+              </div>
+
+              <button class="btn primary" id="btnFormWA">Abrir WhatsApp con el mensaje listo</button>
+              <div class="helper">
+                Importante: esta demo no toma datos personales ni formularios. Solo te abre WhatsApp con un mensaje prearmado.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUCIONES -->
+    <section id="soluciones">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <div>
+            <h2>Soluciones energéticas</h2>
+            <p>Elegí el camino según tu necesidad: continuidad, ahorro o autonomía.</p>
+          </div>
+        </div>
+
+        <div class="grid3">
+          <div class="feature">
+            <b>Respaldo con baterías</b>
+            <p>Para que tu casa o negocio siga funcionando cuando se corta la luz (cámaras, heladera, internet, POS, iluminación).</p>
+          </div>
+          <div class="feature">
+            <b>Energía solar</b>
+            <p>Proyectos a medida para reducir consumo y aumentar independencia energética con un plan claro.</p>
+          </div>
+          <div class="feature">
+            <b>Equipos portátiles</b>
+            <p>Estaciones de energía para uso puntual: cortes, camping, trabajo en campo o respaldo inmediato.</p>
+          </div>
+        </div>
+
+        <div style="height:14px"></div>
+
+        <div class="grid3">
+          <div class="feature">
+            <b>Termotanques solares</b>
+            <p>Agua caliente con menor gasto energético. Ideal para hogares y emprendimientos.</p>
+          </div>
+          <div class="feature">
+            <b>Financiación</b>
+            <p>Opciones según disponibilidad. Te guiamos con claridad para que el proyecto sea viable.</p>
+          </div>
+          <div class="feature">
+            <b>Asesoramiento real</b>
+            <p>Sin vueltas: entendemos tu caso y proponemos una solución que tenga sentido para tu uso.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARA QUIÉN -->
+    <section id="para-quien">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <div>
+            <h2>¿Para quién es?</h2>
+            <p>Segmentamos para que la consulta llegue con contexto y sea más fácil ayudarte.</p>
+          </div>
+        </div>
+
+        <div class="grid2">
+          <div class="seg">
+            <b>🏠 Viviendas</b>
+            <small>Respaldo por cortes, ahorro en factura y autonomía gradual con baterías.</small>
+            <button class="btn ghost segBtn" data-seg="Vivienda">Consultar para vivienda</button>
+          </div>
+          <div class="seg">
+            <b>🏪 Comercios / PyMEs</b>
+            <small>Que no se corte el POS, cámaras, heladeras, iluminación y conectividad.</small>
+            <button class="btn ghost segBtn" data-seg="Comercio / PyME">Consultar para comercio</button>
+          </div>
+          <div class="seg">
+            <b>🏭 Empresas / Industria</b>
+            <small>Soluciones escalables, continuidad operativa y planificación por etapas.</small>
+            <button class="btn ghost segBtn" data-seg="Empresa / Industria">Consultar para empresa</button>
+          </div>
+          <div class="seg">
+            <b>🌾 Zona rural</b>
+            <small>Autonomía energética, respaldo y soluciones para campo/trabajo remoto.</small>
+            <button class="btn ghost segBtn" data-seg="Zona rural">Consultar para zona rural</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section id="proceso">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <div>
+            <h2>Cómo trabajamos</h2>
+            <p>Un proceso simple para llegar rápido a una recomendación concreta.</p>
+          </div>
+        </div>
+
+        <div class="grid3">
+          <div class="feature">
+            <b>1) Relevamos tu caso</b>
+            <p>Qué querés alimentar, frecuencia de cortes, consumo aproximado y ubicación.</p>
+          </div>
+          <div class="feature">
+            <b>2) Te proponemos una opción</b>
+            <p>Alternativas claras con enfoque en continuidad y costo/beneficio.</p>
+          </div>
+          <div class="feature">
+            <b>3) Implementación / puesta a punto</b>
+            <p>Instalación/configuración y recomendaciones para que funcione como esperás.</p>
+          </div>
+        </div>
+
+        <div style="height:14px"></div>
+
+        <div class="ctaBand">
+          <div>
+            <b>¿Querés que lo veamos en 2 minutos?</b>
+            <span>Hacé la consulta con los datos básicos y te respondemos con una guía inicial.</span>
+          </div>
+          <button class="btn primary" id="btnMidWA">Consultar por WhatsApp</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <div>
+            <h2>Preguntas frecuentes</h2>
+            <p>Respuestas rápidas para que la gente avance sin trabarse.</p>
+          </div>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>¿Sirve solo para ahorrar o también para cortes de luz?</summary>
+            <p>Ambos. Con baterías podés tener respaldo por cortes; con solar podés reducir consumo y mejorar autonomía. Se define según tu necesidad.</p>
+          </details>
+
+          <details>
+            <summary>¿Qué datos necesitan para recomendarme algo?</summary>
+            <p>Tipo de uso (casa/comercio), qué equipos querés mantener prendidos, tu zona y si tenés una idea aproximada de consumo/factura.</p>
+          </details>
+
+          <details>
+            <summary>¿Hacen proyectos a medida?</summary>
+            <p>Sí. La idea es que el sistema tenga sentido para tu caso, no venderte algo genérico que después no rinde.</p>
+          </details>
+
+          <details>
+            <summary>¿Puedo empezar con algo chico y escalar?</summary>
+            <p>En muchos casos sí. Se puede planificar por etapas (respaldo primero, luego solar, etc.) según presupuesto y prioridad.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- BOTÓN WHATSAPP FLOTANTE -->
+  <a class="waFloat" id="waFloat" href="#" aria-label="WhatsApp GO ENERGY">
+    <span class="waIcon" aria-hidden="true">
+      <svg viewBox="0 0 32 32" role="img" aria-label="WhatsApp">
+        <path d="M19.11 17.24c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.31.2-.58.07-.27-.14-1.12-.41-2.14-1.31-.79-.7-1.33-1.56-1.49-1.83-.16-.27-.02-.42.12-.56.12-.12.27-.31.41-.47.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.47-.07-.14-.61-1.47-.84-2.02-.22-.53-.45-.46-.61-.46h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.63 1.11 2.81c.14.18 1.9 2.9 4.61 4.07.65.28 1.16.45 1.55.57.65.21 1.24.18 1.71.11.52-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
+        <path d="M26.73 5.27A14.12 14.12 0 0 0 16.01 1C8.28 1 2 7.28 2 15.01c0 2.47.65 4.88 1.88 7.01L2 31l9.21-1.82a14 14 0 0 0 6.8 1.73h.01c7.73 0 14.01-6.28 14.01-14.01 0-3.74-1.46-7.25-4.3-9.63zM16.01 28.5h-.01a11.63 11.63 0 0 1-5.93-1.62l-.43-.25-5.47 1.08 1.03-5.33-.28-.45a11.66 11.66 0 0 1-1.79-6.22C3.13 9.2 8.2 4.13 16.02 4.13c3.11 0 6.03 1.21 8.23 3.41a11.56 11.56 0 0 1 3.41 8.23c0 6.41-5.22 11.63-11.65 11.63z"/>
+      </svg>
+    </span>
+    WhatsApp <small>· Consultar</small>
+  </a>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div>
+          <b style="color:rgba(234,240,255,.92)">GO ENERGY</b><br />
+          <span>Soluciones energéticas · Energía solar · Respaldo con baterías</span><br />
+          <span id="footCity">Corrientes, Argentina</span>
+        </div>
+
+        <div class="social">
+          <a class="sbtn" id="igLink" href="#" target="_blank" rel="noopener">Instagram</a>
+          <a class="sbtn" id="webLink" href="#" target="_blank" rel="noopener">Sitio / Link</a>
+          <a class="sbtn" id="waLink" href="#" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+
+        <div>
+          <span>Creado y diseñado por <a href="https://ciborg347.onrender.com" target="_blank" rel="noopener">Ciborg 347</a></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      const cfg = window.GO_ENERGY_CONFIG || {};
+      const wa = (cfg.waNumberE164 || "").replace(/\D/g, "");
+      const city = cfg.city || "Corrientes";
+
+      const elCity = document.getElementById("cityLabel");
+      const elFootCity = document.getElementById("footCity");
+      if(elCity) elCity.textContent = city;
+      if(elFootCity) elFootCity.textContent = `${city}, Argentina`;
+
+      const ig = document.getElementById("igLink");
+      const web = document.getElementById("webLink");
+      const wal = document.getElementById("waLink");
+
+      if(ig) ig.href = cfg.instagram || "https://www.instagram.com/go.energy/";
+      if(web) web.href = cfg.website || "https://go-energy.me";
+      if(wal) wal.href = buildWaUrl("Hola! Quisiera hacer una consulta sobre soluciones energéticas. ¿Me asesoran?");
+
+      const waFloat = document.getElementById("waFloat");
+      const btnHeroWA = document.getElementById("btnHeroWA");
+      const btnMidWA = document.getElementById("btnMidWA");
+      const btnFormWA = document.getElementById("btnFormWA");
+
+      function buildWaUrl(message){
+        const base = wa ? `https://wa.me/${wa}` : "https://wa.me/";
+        const txt = encodeURIComponent(message || "");
+        return `${base}?text=${txt}`;
+      }
+
+      function buildFilteredMessage(){
+        const tipo = document.getElementById("tipo").value;
+        const objetivo = document.getElementById("objetivo").value;
+        const zona = (document.getElementById("zona").value || "").trim() || city;
+        const consumo = document.getElementById("consumo").value;
+        const detalle = (document.getElementById("detalle").value || "").trim();
+
+        let msg = `Hola! Soy ${tipo}. Necesito: ${objetivo}.\n`;
+        msg += `Zona: ${zona}.\n`;
+        msg += `Factura aprox: ${consumo}.\n`;
+        if(detalle) msg += `Detalle: ${detalle}\n`;
+        msg += `\n¿Me orientan con una recomendación inicial?`;
+        return msg;
+      }
+
+      function openWA(message){
+        const url = buildWaUrl(message);
+        window.open(url, "_blank", "noopener");
+      }
+
+      if(waFloat) waFloat.href = buildWaUrl("Hola! Vi GO ENERGY y quiero una recomendación para mi caso. ¿Me asesoran?");
+      if(btnHeroWA) btnHeroWA.addEventListener("click", () => openWA("Hola! Quiero una solución para mi caso (cortes de luz / ahorro). ¿Me asesoran?"));
+      if(btnMidWA) btnMidWA.addEventListener("click", () => openWA("Hola! Quisiera asesoramiento para una solución energética. ¿Qué datos necesitan?"));
+      if(btnFormWA) btnFormWA.addEventListener("click", () => openWA(buildFilteredMessage()));
+
+      document.querySelectorAll(".segBtn").forEach(btn=>{
+        btn.addEventListener("click", ()=>{
+          const seg = btn.getAttribute("data-seg") || "Consulta";
+          const msg = `Hola! Quiero consultar para: ${seg}. Estoy en ${city}. ¿Me asesoran con una opción según mi caso?`;
+          openWA(msg);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
