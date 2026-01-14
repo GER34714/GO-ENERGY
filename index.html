@@ -12,19 +12,18 @@
   <meta property="og:title" content="GO ENERGY | Soluciones energéticas en Corrientes" />
   <meta property="og:description" content="Energía solar + respaldo con baterías. Asesoramiento personalizado. Consultá por WhatsApp." />
   <meta property="og:type" content="website" />
-  <!-- Reemplazá por una imagen real del negocio (1200x630) -->
-  <meta property="og:image" content="https://iili.io/fETkPEv.md.png" />
   <meta property="og:locale" content="es_AR" />
+  <!-- Reemplazá estas rutas por donde subas las imágenes (o dejalas en /assets con esos nombres) -->
+  <meta property="og:image" content="assets/energia-inversion.png" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="GO ENERGY | Energía solar y respaldo" />
   <meta name="twitter:description" content="Soluciones energéticas en Corrientes. Consultá por WhatsApp." />
-  <meta name="twitter:image" content="https://iili.io/fETkPEv.md.png" />
+  <meta name="twitter:image" content="assets/energia-inversion.png" />
 
-  <!-- Favicon (opcional) -->
-  <!-- Reemplazá por el logo real -->
-  <link rel="icon" type="image/png" href="https://iili.io/fETkPEv.md.png" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo-go-energy.png" />
 
   <style>
     :root{
@@ -34,15 +33,13 @@
       --text:#eaf0ff;
       --muted:#b9c6e6;
       --line:rgba(255,255,255,.10);
-      --glow:rgba(54, 169, 255, .22);
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --radius:20px;
+      --max: 1120px;
+      --ok:#3cffb3;
       --c1:#22c1ff;
       --c2:#6a5cff;
       --c3:#ffb020;
-      --ok:#3cffb3;
-      --danger:#ff5b6b;
-      --radius:20px;
-      --shadow: 0 18px 60px rgba(0,0,0,.45);
-      --max: 1120px;
     }
 
     *{box-sizing:border-box}
@@ -61,6 +58,7 @@
 
     a{color:inherit; text-decoration:none}
     .wrap{width:100%; max-width:var(--max); margin:0 auto; padding:0 18px}
+
     .topbar{
       position:sticky; top:0; z-index:50;
       backdrop-filter: blur(10px);
@@ -72,20 +70,20 @@
       padding:14px 0;
       gap:14px;
     }
+
     .brand{
       display:flex; align-items:center; gap:12px; min-width:180px;
     }
     .logo{
       width:44px; height:44px; border-radius:14px;
-      background:
-        radial-gradient(18px 18px at 30% 25%, rgba(255,255,255,.25), transparent 60%),
-        linear-gradient(135deg, rgba(34,193,255,.95), rgba(106,92,255,.9));
-      box-shadow: 0 10px 30px rgba(34,193,255,.12), 0 10px 30px rgba(106,92,255,.10);
-      display:grid; place-items:center;
       border:1px solid rgba(255,255,255,.14);
       overflow:hidden;
+      background: rgba(255,255,255,.04);
+      display:grid; place-items:center;
+      box-shadow: 0 10px 30px rgba(34,193,255,.10), 0 10px 30px rgba(106,92,255,.08);
     }
     .logo img{width:100%; height:100%; object-fit:cover}
+
     .brand .txt{display:flex; flex-direction:column; line-height:1.1}
     .brand .txt b{letter-spacing:.2px}
     .brand .txt span{font-size:12px; color:var(--muted)}
@@ -97,6 +95,7 @@
       border:1px solid transparent;
     }
     .nav a:hover{border-color:rgba(255,255,255,.12); background:rgba(255,255,255,.04)}
+
     .btn{
       display:inline-flex; align-items:center; justify-content:center; gap:10px;
       padding:12px 14px; border-radius:16px;
@@ -119,6 +118,7 @@
       background: rgba(255,255,255,.04);
       box-shadow:none;
     }
+
     .pill{
       display:inline-flex; align-items:center; gap:8px;
       padding:8px 10px; border-radius:999px;
@@ -129,16 +129,15 @@
       width:max-content;
     }
     .dot{width:8px; height:8px; border-radius:99px; background:var(--ok); box-shadow: 0 0 14px rgba(60,255,179,.5)}
-    .hero{
-      position:relative;
-      padding:48px 0 24px;
-    }
+
+    .hero{position:relative; padding:48px 0 24px}
     .heroGrid{
       display:grid;
       grid-template-columns: 1.15fr .85fr;
       gap:22px;
       align-items:stretch;
     }
+
     .card{
       border:1px solid rgba(255,255,255,.12);
       background: linear-gradient(180deg, rgba(11,18,32,.86), rgba(9,14,26,.78));
@@ -147,6 +146,7 @@
       overflow:hidden;
     }
     .card.pad{padding:22px}
+
     h1{
       margin:12px 0 10px;
       font-size: clamp(28px, 3.4vw, 44px);
@@ -159,15 +159,11 @@
       line-height:1.55;
       margin:0 0 18px;
     }
+
     .heroActions{display:flex; gap:12px; flex-wrap:wrap; margin-top:12px}
     .badges{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
 
-    .miniGrid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:12px;
-      margin-top:14px;
-    }
+    .miniGrid{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px}
     .mini{
       border:1px solid rgba(255,255,255,.12);
       border-radius:18px;
@@ -184,12 +180,9 @@
     .panelHead b{font-size:14px}
     .panelHead span{font-size:12px; color:var(--muted)}
 
-    .form{
-      display:grid;
-      gap:10px;
-      margin-top:12px;
-    }
+    .form{display:grid; gap:10px; margin-top:12px}
     .row{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+
     label{font-size:12px; color:rgba(234,240,255,.8)}
     input, select, textarea{
       width:100%;
@@ -224,6 +217,7 @@
 
     .grid3{display:grid; grid-template-columns:repeat(3, 1fr); gap:14px}
     .grid2{display:grid; grid-template-columns:repeat(2, 1fr); gap:14px}
+
     .feature{
       padding:16px;
       border-radius:18px;
@@ -283,9 +277,37 @@
     summary{cursor:pointer; font-weight:700; font-size:13px}
     details p{margin:8px 0 0; color:rgba(234,240,255,.78); font-size:13px; line-height:1.5}
 
+    /* Bloques con imagen (agregadas) */
+    .mediaGrid{display:grid; grid-template-columns: 1fr 1fr; gap:14px}
+    .mediaCard{
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:18px;
+      overflow:hidden;
+      background: rgba(255,255,255,.03);
+      display:flex;
+      flex-direction:column;
+      min-height:240px;
+    }
+    .mediaThumb{
+      position:relative;
+      aspect-ratio: 16 / 11;
+      width:100%;
+      overflow:hidden;
+      background: rgba(255,255,255,.02);
+    }
+    .mediaThumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .mediaBody{padding:14px}
+    .mediaBody b{display:block; margin-bottom:6px}
+    .mediaBody p{margin:0; color:rgba(234,240,255,.78); font-size:13px; line-height:1.45}
+
     footer{
       margin-top:20px;
-      padding:22px 0 calc(80px + env(safe-area-inset-bottom)); /* deja espacio para el botón flotante */
+      padding:22px 0 calc(80px + env(safe-area-inset-bottom));
       border-top:1px solid var(--line);
       background: rgba(7,11,20,.55);
     }
@@ -304,7 +326,7 @@
       background: rgba(255,255,255,.03);
     }
 
-    /* WhatsApp flotante (no tapa footer por el padding del footer) */
+    /* WhatsApp flotante */
     .waFloat{
       position:fixed;
       right:16px;
@@ -332,12 +354,12 @@
     .waIcon svg{width:16px; height:16px; fill:#071217}
     .waFloat small{font-weight:700; opacity:.85}
 
-    /* Responsive */
     @media (max-width: 920px){
       .heroGrid{grid-template-columns:1fr}
       .row{grid-template-columns:1fr}
       .grid3{grid-template-columns:1fr}
       .grid2{grid-template-columns:1fr}
+      .mediaGrid{grid-template-columns:1fr}
       .nav{display:none}
     }
   </style>
@@ -362,7 +384,6 @@
 
 <body>
   <!-- CONFIG DEMO -->
-  <!-- Reemplazá estos valores por los reales del cliente cuando corresponda -->
   <script>
     window.GO_ENERGY_CONFIG = {
       brandName: "GO ENERGY",
@@ -370,7 +391,13 @@
       website: "https://go-energy.me",
       instagram: "https://www.instagram.com/go.energy/",
       // DEMO: tu WhatsApp (cambiá por el de GO ENERGY cuando te lo pasen)
-      waNumberE164: "5491164499481"
+      waNumberE164: "5491164499481",
+
+      // IMÁGENES (las 2 agregadas + logo)
+      // Subilas a /assets con estos nombres, o cambiá las rutas por tu hosting.
+      imgEnergyInvest: "assets/energia-inversion.png",
+      imgThermo: "assets/termotanques-solares.png",
+      imgLogo: "assets/logo-go-energy.png"
     };
   </script>
 
@@ -379,8 +406,7 @@
       <div class="inner">
         <div class="brand">
           <div class="logo" aria-hidden="true">
-            <!-- Reemplazá por el logo real si querés -->
-            <img src="https://iili.io/fETkPEv.md.png" alt="Logo" onerror="this.style.display='none'" />
+            <img id="brandLogo" src="assets/logo-go-energy.png" alt="GO ENERGY Logo" />
           </div>
           <div class="txt">
             <b>GO ENERGY</b>
@@ -390,6 +416,7 @@
 
         <nav class="nav">
           <a href="#soluciones">Soluciones</a>
+          <a href="#beneficios">Beneficios</a>
           <a href="#para-quien">¿Para quién?</a>
           <a href="#proceso">Cómo trabajamos</a>
           <a href="#faq">FAQ</a>
@@ -548,6 +575,50 @@
       </div>
     </section>
 
+    <!-- BENEFICIOS (ACÁ VAN LAS 2 IMÁGENES QUE PEDISTE) -->
+    <section id="beneficios">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <div>
+            <h2>Beneficios en simple</h2>
+            <p>Dos ideas clave para que la gente entienda rápido y avance a consultar.</p>
+          </div>
+        </div>
+
+        <div class="mediaGrid">
+          <div class="mediaCard">
+            <div class="mediaThumb">
+              <img id="imgEnergyInvest" src="assets/energia-inversion.png" alt="La energía no es un gasto, es una inversión" />
+            </div>
+            <div class="mediaBody">
+              <b>La energía es inversión</b>
+              <p>La propuesta se entiende rápido: continuidad, ahorro y previsibilidad para casa o negocio.</p>
+            </div>
+          </div>
+
+          <div class="mediaCard">
+            <div class="mediaThumb">
+              <img id="imgThermo" src="assets/termotanques-solares.png" alt="Termotanques solares" />
+            </div>
+            <div class="mediaBody">
+              <b>Termotanques solares</b>
+              <p>Una solución concreta y muy consultada: agua caliente con menor gasto energético.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="height:14px"></div>
+
+        <div class="ctaBand">
+          <div>
+            <b>¿Querés que te recomendemos la mejor opción?</b>
+            <span>Hacelo por WhatsApp con tu caso y te guiamos con claridad.</span>
+          </div>
+          <button class="btn primary" id="btnBenefitsWA">Consultar por WhatsApp</button>
+        </div>
+      </div>
+    </section>
+
     <!-- PARA QUIÉN -->
     <section id="para-quien">
       <div class="wrap">
@@ -694,29 +765,51 @@
       const wa = (cfg.waNumberE164 || "").replace(/\D/g, "");
       const city = cfg.city || "Corrientes";
 
+      // Set texts
       const elCity = document.getElementById("cityLabel");
       const elFootCity = document.getElementById("footCity");
       if(elCity) elCity.textContent = city;
       if(elFootCity) elFootCity.textContent = `${city}, Argentina`;
 
+      // Set links
       const ig = document.getElementById("igLink");
       const web = document.getElementById("webLink");
       const wal = document.getElementById("waLink");
-
       if(ig) ig.href = cfg.instagram || "https://www.instagram.com/go.energy/";
       if(web) web.href = cfg.website || "https://go-energy.me";
-      if(wal) wal.href = buildWaUrl("Hola! Quisiera hacer una consulta sobre soluciones energéticas. ¿Me asesoran?");
 
-      const waFloat = document.getElementById("waFloat");
-      const btnHeroWA = document.getElementById("btnHeroWA");
-      const btnMidWA = document.getElementById("btnMidWA");
-      const btnFormWA = document.getElementById("btnFormWA");
+      // Set images (logo + 2 agregadas)
+      const logo = document.getElementById("brandLogo");
+      const img1 = document.getElementById("imgEnergyInvest");
+      const img2 = document.getElementById("imgThermo");
+      if(logo && cfg.imgLogo) logo.src = cfg.imgLogo;
+      if(img1 && cfg.imgEnergyInvest) img1.src = cfg.imgEnergyInvest;
+      if(img2 && cfg.imgThermo) img2.src = cfg.imgThermo;
 
       function buildWaUrl(message){
         const base = wa ? `https://wa.me/${wa}` : "https://wa.me/";
         const txt = encodeURIComponent(message || "");
         return `${base}?text=${txt}`;
       }
+
+      function openWA(message){
+        const url = buildWaUrl(message);
+        window.open(url, "_blank", "noopener");
+      }
+
+      if(wal) wal.href = buildWaUrl("Hola! Quisiera hacer una consulta sobre soluciones energéticas. ¿Me asesoran?");
+
+      // Buttons
+      const waFloat = document.getElementById("waFloat");
+      const btnHeroWA = document.getElementById("btnHeroWA");
+      const btnMidWA = document.getElementById("btnMidWA");
+      const btnFormWA = document.getElementById("btnFormWA");
+      const btnBenefitsWA = document.getElementById("btnBenefitsWA");
+
+      if(waFloat) waFloat.href = buildWaUrl("Hola! Vi GO ENERGY y quiero una recomendación para mi caso. ¿Me asesoran?");
+      if(btnHeroWA) btnHeroWA.addEventListener("click", () => openWA("Hola! Quiero una solución para mi caso (cortes de luz / ahorro). ¿Me asesoran?"));
+      if(btnMidWA) btnMidWA.addEventListener("click", () => openWA("Hola! Quisiera asesoramiento para una solución energética. ¿Qué datos necesitan?"));
+      if(btnBenefitsWA) btnBenefitsWA.addEventListener("click", () => openWA("Hola! Me interesa una solución energética. ¿Me orientan con una recomendación inicial según mi caso?"));
 
       function buildFilteredMessage(){
         const tipo = document.getElementById("tipo").value;
@@ -733,14 +826,6 @@
         return msg;
       }
 
-      function openWA(message){
-        const url = buildWaUrl(message);
-        window.open(url, "_blank", "noopener");
-      }
-
-      if(waFloat) waFloat.href = buildWaUrl("Hola! Vi GO ENERGY y quiero una recomendación para mi caso. ¿Me asesoran?");
-      if(btnHeroWA) btnHeroWA.addEventListener("click", () => openWA("Hola! Quiero una solución para mi caso (cortes de luz / ahorro). ¿Me asesoran?"));
-      if(btnMidWA) btnMidWA.addEventListener("click", () => openWA("Hola! Quisiera asesoramiento para una solución energética. ¿Qué datos necesitan?"));
       if(btnFormWA) btnFormWA.addEventListener("click", () => openWA(buildFilteredMessage()));
 
       document.querySelectorAll(".segBtn").forEach(btn=>{
